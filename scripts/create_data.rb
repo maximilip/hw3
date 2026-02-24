@@ -1,6 +1,6 @@
 Place.destroy_all
 
-# Create companies
+# Create places
 
 mexico = Place.new
 mexico["name"] = "Mexico City"
@@ -17,3 +17,11 @@ beijing.save
 amsterdam = Place.new
 amsterdam["name"] = "Amsterdam"
 amsterdam.save
+
+# Create entries
+
+tacos = Entry.new
+tacos["title"] = "Ate tacos"
+tacos["description"] = "Authentic"
+tacos["occurred_on"] = "2022-01-01"
+tacos["place_id"] = mexico.id
